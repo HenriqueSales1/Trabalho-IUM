@@ -1,0 +1,204 @@
+/* Título da página de contato */
+#titulo {
+    min-height: 250px !important;
+    padding: 2rem 4rem !important;
+}
+
+#titulo > div {
+    text-align: center;
+}
+
+/* Formulário de Contato */
+#formulario-contato {
+    background: linear-gradient(180deg, #F2D6CE 0%, #F5E0D8 100%);
+    padding: 4rem 2rem;
+    min-height: 600px;
+}
+
+.container-formulario {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.info-contato {
+    background-color: #EB7871;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    color: #ffffff;
+}
+
+.info-contato h2 {
+    margin: 0 0 2rem 0;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.contato-item {
+    margin-bottom: 2rem;
+}
+
+.contato-item:last-child {
+    margin-bottom: 0;
+}
+
+.contato-item h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.contato-item p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.6;
+    opacity: 0.95;
+}
+
+form {
+    background-color: #ffffff;
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+form h2 {
+    margin: 0 0 0.5rem 0;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #EB7871;
+}
+
+form p {
+    margin: 0 0 2rem 0;
+    color: #666;
+    font-size: 1rem;
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 0.875rem;
+    margin-bottom: 1.5rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+form input:focus,
+form textarea:focus {
+    outline: none;
+    border-color: #EBA271;
+}
+
+form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+form button {
+    width: 100%;
+    padding: 1rem 2rem;
+    background-color: #EBA271;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+form button:hover {
+    background-color: #EB7871;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(235, 162, 113, 0.4);
+}
+
+.custom-alert-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    backdrop-filter: blur(3px);
+}
+
+.custom-alert {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+    animation: slideIn 0.3s ease;
+}
+
+.custom-alert p {
+    color: #EB7871;
+    font-size: 1.2rem;
+    margin: 0 0 1.5rem 0;
+    font-weight: 500;
+}
+
+.custom-alert button {
+    background: #EBA271;
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+.custom-alert button:hover {
+    background: #d89260;
+    transform: scale(1.05);
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .container-formulario {
+        grid-template-columns: 1fr;
+    }
+    
+    form,
+    .info-contato {
+        padding: 2rem;
+    }
+}

@@ -1,0 +1,107 @@
+/* Ajustes na seção de título */
+#titulo {
+    min-height: 250px !important;
+    padding: 2rem 4rem !important;
+}
+
+#titulo > div {
+    text-align: center;
+}
+
+/* Seção de Profissionais */
+#workers {
+    padding: 80px 20px;
+    background: linear-gradient(180deg, #F2D6CE 0%, #ffffff 100%);
+    min-height: 60vh;
+}
+
+#workers .section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #EB7871;
+    margin-bottom: 50px;
+    font-weight: 600;
+}
+
+.workers-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.worker-card {
+    background: white;
+    border-radius: 0 20px 0 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 280px;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.worker-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(235, 162, 113, 0.3);
+}
+
+.worker-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-bottom: 4px solid #EBA271;
+}
+
+.worker-info {
+    padding: 25px;
+    text-align: center;
+    background: white;
+}
+
+.worker-info h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.worker-role {
+    font-size: 1.1rem;
+    color: #EB7871;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.worker-crp {
+    font-size: 0.95rem;
+    color: #666;
+    font-weight: 400;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #workers {
+        padding: 50px 15px;
+    }
+
+    #workers .section-title {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+
+    .workers-container {
+        gap: 20px;
+    }
+
+    .worker-card {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .worker-card img {
+        height: 300px;
+    }
+}
