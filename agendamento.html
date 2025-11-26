@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/styles.css">
-    <link rel="stylesheet" href="./styles/equipe.css">
-    <title>Nossa Equipe | Espaço Crisálida</title>
+    <link rel="stylesheet" href="./styles/agendamento.css">
+    <link rel="stylesheet" href="./styles/form.css">
+    <title>Agendamento | Espaço Crisálida</title>
 </head>
 
 <body>
@@ -24,72 +25,41 @@
 
     <section id="titulo">
         <div>
-            <h1>Nossa Equipe</h1>
-            <h2>Profissionais especializados e comprometidos com seu bem-estar.</h2>
+            <h1>Agendamento de Consulta</h1>
+            <h2>Escolha o melhor dia e horário para você.</h2>
         </div>
     </section>
 
-    <section id="workers">
-        <h2 class="section-title">Conheça nossos profissionais</h2>
-        <div class="workers-container">
-            <div class="worker-card">
-                <img src="./img/360_F_192900776_qrENUG89IgXcz9hldxcrZB5C9gEzu9ga.jpg" alt="Foto de Fulana de Tal">
-                <div class="worker-info">
-                    <h3>Alessandra Silva</h3>
-                    <p class="worker-role">Psicóloga</p>
-                    <p class="worker-crp">CRP 13/45678</p>
-                    <p class="worker-description">Graduada em Psicologia pela UFMG, com especialização em Terapia Cognitivo-Comportamental. Atua há 8 anos no atendimento clínico de adolescentes e adultos.</p>
+    <section id="agendamento-container">
+        <div class="agendamento-content">
+            <div class="calendario-section">
+                <h3>Selecione a Data</h3>
+                <div class="calendario" id="calendario">
+                    <div class="calendario-header">
+                        <button class="btn-mes" id="btnMesAnterior">&larr;</button>
+                        <h4 id="mesAno"></h4>
+                        <button class="btn-mes" id="btnMesProximo">&rarr;</button>
+                    </div>
+                    <div class="calendario-dias-semana">
+                        <span>Dom</span>
+                        <span>Seg</span>
+                        <span>Ter</span>
+                        <span>Qua</span>
+                        <span>Qui</span>
+                        <span>Sex</span>
+                        <span>Sáb</span>
+                    </div>
+                    <div class="calendario-dias" id="calendarioDias"></div>
                 </div>
             </div>
 
-            <div class="worker-card">
-                <img src="./img/1000_F_169387942_tUJn9ADX31sRDFCuK9nlBuRR4gO6a1TK.jpg" alt="Foto de Ciclana">
-                <div class="worker-info">
-                    <h3>Joana Carvalhaes</h3>
-                    <p class="worker-role">Psicóloga</p>
-                    <p class="worker-crp">CRP 13/45678</p>
-                    <p class="worker-description">Formada em Psicologia pela PUC-SP, com mestrado em Psicologia Clínica. Especialista em terapia de casal e família, com abordagem sistêmica.</p>
+            <div class="horarios-section">
+                <h3>Horários Disponíveis</h3>
+                <p class="data-selecionada" id="dataSelecionada">Selecione uma data no calendário</p>
+                <div class="horarios-grid" id="horariosGrid">
+                    <!-- Horários serão preenchidos dinamicamente -->
                 </div>
-            </div>
-
-            <div class="worker-card">
-                <img src="./img/1000_F_441940551_fRKrp53vQQuxqCJNEmdlKkR6dyfF0Glg.jpg" alt="Foto de Beltrana">
-                <div class="worker-info">
-                    <h3>Melina Souza</h3>
-                    <p class="worker-role">Psiquiatra</p>
-                    <p class="worker-crp">CRM 13/45678</p>
-                    <p class="worker-description">Médica formada pela UFMG com residência em Psiquiatria pelo Hospital das Clínicas. Especialista em transtornos de humor e ansiedade.</p>
-                </div>
-            </div>
-
-            <div class="worker-card">
-                <img src="./img/handsome-male-psychologist-listening-to-woman-client-sitting-psychological-session-blue-office-interior-134297739.webp" alt="Foto de Fulano de Tal">
-                <div class="worker-info">
-                    <h3>Márcio Braz</h3>
-                    <p class="worker-role">Psicólogo</p>
-                    <p class="worker-crp">CRP 13/45678</p>
-                    <p class="worker-description">Graduado em Psicologia pela UFRJ, com doutorado em Neuropsicologia. Atua com avaliação neuropsicológica e reabilitação cognitiva.</p>
-                </div>
-            </div>
-
-            <div class="worker-card">
-                <img src="./img/istockphoto-1326420590-612x612.jpg" alt="Foto de Fulano de Tal">
-                <div class="worker-info">
-                    <h3>Fernando Oliveira</h3>
-                    <p class="worker-role">Psiquiatra</p>
-                    <p class="worker-crp">CRM 13/45678</p>
-                    <p class="worker-description">Formado em Medicina pela USP com especialização em Psiquiatria Infantil. Atende crianças e adolescentes com transtornos do desenvolvimento.</p>
-                </div>
-            </div>
-
-            <div class="worker-card">
-                <img src="./img/male-psychologist-being-ready-to-take-notes-sitting-couch-31680668.webp" alt="Foto de Fulano de Tal">
-                <div class="worker-info">
-                    <h3>Conrado Figueiredo</h3>
-                    <p class="worker-role">Psiquiatra</p>
-                    <p class="worker-crp">CRM 13/45678</p>
-                    <p class="worker-description">Médico pela UFES com residência em Psiquiatria pela UNIFESP. Especialista em dependência química e transtornos relacionados ao uso de substâncias.</p>
-                </div>
+                <button class="btn-confirmar" id="btnConfirmar" disabled>Confirmar Agendamento</button>
             </div>
         </div>
     </section>
@@ -156,6 +126,7 @@
     </div>
 
     <script src="./scripts/scripts.js"></script>
+    <script src="./scripts/agendamento.js"></script>
 </body>
 
 </html>

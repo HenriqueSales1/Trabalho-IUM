@@ -79,6 +79,17 @@
     font-size: 0.95rem;
     color: #666;
     font-weight: 400;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #EBA271;
+}
+
+.worker-description {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.5;
+    margin-top: 15px;
+    text-align: left;
 }
 
 /* Responsive */

@@ -71,7 +71,27 @@
 }
 
 .servico-detalhado p:last-child {
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
+}
+
+.btn-agendar {
+    display: inline-block;
+    margin: 0 2.5rem 2rem 2.5rem;
+    padding: 0.8rem 2rem;
+    background: linear-gradient(135deg, #EBA271 0%, #EA8C70 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(235, 162, 113, 0.3);
+}
+
+.btn-agendar:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(235, 162, 113, 0.4);
+    background: linear-gradient(135deg, #d89260 0%, #d67b5f 100%);
 }
 
 /* Responsive */
